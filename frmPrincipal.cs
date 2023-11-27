@@ -16,5 +16,17 @@ namespace club_deportivo
         {
             InitializeComponent();
         }
+
+        private void btnInscribir_Click(object sender, EventArgs e)
+        {
+            frmInscripcion inscripcion = new frmInscripcion();
+            inscripcion.Show();
+            this.Hide();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
