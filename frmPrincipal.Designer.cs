@@ -1,4 +1,6 @@
-﻿namespace club_deportivo
+﻿using System.Data;
+
+namespace club_deportivo
 {
     partial class frmPrincipal
     {
@@ -30,6 +32,8 @@
         {
             btnInscribir = new Button();
             btnSalir = new Button();
+            lblIngreso = new Label();
+            btnListado = new Button();
             SuspendLayout();
             // 
             // btnInscribir
@@ -37,9 +41,9 @@
             btnInscribir.BackColor = SystemColors.MenuHighlight;
             btnInscribir.Font = new Font("Sans Serif Collection", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point);
             btnInscribir.ForeColor = SystemColors.ButtonHighlight;
-            btnInscribir.Location = new Point(53, 57);
+            btnInscribir.Location = new Point(53, 92);
             btnInscribir.Name = "btnInscribir";
-            btnInscribir.Size = new Size(193, 97);
+            btnInscribir.Size = new Size(193, 112);
             btnInscribir.TabIndex = 0;
             btnInscribir.Text = "Inscribirse";
             btnInscribir.UseVisualStyleBackColor = false;
@@ -56,7 +60,29 @@
             btnSalir.TabIndex = 1;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
-            btnSalir.Click += new EventHandler(btnSalir_Click);
+            btnSalir.Click += btnSalir_Click;
+            // 
+            // lblIngreso
+            // 
+            lblIngreso.AutoSize = true;
+            lblIngreso.Location = new Point(23, 9);
+            lblIngreso.Name = "lblIngreso";
+            lblIngreso.Size = new Size(46, 15);
+            lblIngreso.TabIndex = 2;
+            lblIngreso.Text = "usuario";
+            // 
+            // btnListado
+            // 
+            btnListado.BackColor = SystemColors.MenuHighlight;
+            btnListado.Font = new Font("Sans Serif Collection", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point);
+            btnListado.ForeColor = SystemColors.ButtonHighlight;
+            btnListado.Location = new Point(53, 246);
+            btnListado.Name = "btnListado";
+            btnListado.Size = new Size(193, 118);
+            btnListado.TabIndex = 3;
+            btnListado.Text = "Listado de Socios";
+            btnListado.UseVisualStyleBackColor = false;
+            btnListado.Click += btnListado_Click;
             // 
             // frmPrincipal
             // 
@@ -64,16 +90,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FloralWhite;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnListado);
+            Controls.Add(lblIngreso);
             Controls.Add(btnSalir);
             Controls.Add(btnInscribir);
             Name = "frmPrincipal";
             Text = "frmPrincipal";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button btnInscribir;
         private Button btnSalir;
+        private Label lblIngreso;
+        private Button btnListado;
     }
 }

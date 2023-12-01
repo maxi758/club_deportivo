@@ -39,6 +39,7 @@
             btnVolver = new Button();
             btnInscribir = new Button();
             btnLimpiar = new Button();
+            lblIngreso = new Label();
             SuspendLayout();
             // 
             // lblNombre
@@ -135,11 +136,20 @@
             btnLimpiar.UseVisualStyleBackColor = true;
             btnLimpiar.Click += btnLimpiar_Click;
             // 
+            // lblIngreso
+            // 
+            lblIngreso.AutoSize = true;
+            lblIngreso.Location = new Point(12, 9);
+            lblIngreso.Name = "lblIngreso";
+            lblIngreso.Size = new Size(0, 15);
+            lblIngreso.TabIndex = 11;
+            // 
             // frmInscripcion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblIngreso);
             Controls.Add(btnLimpiar);
             Controls.Add(btnInscribir);
             Controls.Add(btnVolver);
@@ -170,5 +180,6 @@
         private Button btnVolver;
         private Button btnInscribir;
         private Button btnLimpiar;
+        private Label lblIngreso;
     }
 }

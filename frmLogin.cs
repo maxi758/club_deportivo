@@ -4,9 +4,9 @@ using System.Data;
 
 namespace club_deportivo
 {
-    public partial class Form1 : Form
+    public partial class frmLogin : Form
     {
-        public Form1()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -69,7 +69,7 @@ namespace club_deportivo
                 principal
                 ___________________________________________________________________________
                 _______ */
-                //frmPrincipal Principal = new frmPrincipal();
+                frmPrincipal Principal = new frmPrincipal();
                 /*
                 _________________________________________________________
                 ___________
@@ -80,8 +80,10 @@ namespace club_deportivo
                 *
                 ________________________________________________________
                 ____________ */
-                //Principal.rol = Convert.ToString(tablaLogin.Rows[0][0]);
-                //Principal.usuario = Convert.ToString(txtUsuario.Text);
+                Principal.rol = Convert.ToString(tablaLogin.Rows[0][0]);
+                Principal.usuario = Convert.ToString(txtUsuario.Text);
+                Principal.Show();
+                this.Hide();
             }
             else
             {

@@ -1,6 +1,6 @@
 ﻿namespace club_deportivo
 {
-    partial class Form1
+    partial class frmLogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,12 +32,13 @@
             txtUsuario = new TextBox();
             txtPass = new TextBox();
             btnIngresar = new Button();
+            label2 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(441, 108);
+            label1.Location = new Point(421, 108);
             label1.Name = "label1";
             label1.Size = new Size(47, 15);
             label1.TabIndex = 0;
@@ -67,17 +68,27 @@
             btnIngresar.UseVisualStyleBackColor = true;
             btnIngresar.Click += btnIngresar_Click;
             // 
-            // Form1
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(421, 151);
+            label2.Name = "label2";
+            label2.Size = new Size(67, 15);
+            label2.TabIndex = 4;
+            label2.Text = "Contraseña";
+            // 
+            // frmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
             Controls.Add(btnIngresar);
             Controls.Add(txtPass);
             Controls.Add(txtUsuario);
             Controls.Add(label1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "frmLogin";
+            Text = "Login";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -88,5 +99,6 @@
         private TextBox txtUsuario;
         private TextBox txtPass;
         private Button btnIngresar;
+        private Label label2;
     }
 }
