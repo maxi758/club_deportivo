@@ -1,6 +1,6 @@
 ﻿namespace club_deportivo
 {
-    partial class frmListadoSocios
+    partial class frmListaActividades
     {
         /// <summary>
         /// Required designer variable.
@@ -28,48 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dtgv1 = new DataGridView();
+            dtgvAct = new DataGridView();
             btnVolver = new Button();
-            ((System.ComponentModel.ISupportInitialize)dtgv1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvAct).BeginInit();
             SuspendLayout();
             // 
-            // dtgv1
+            // dtgvAct
             // 
-            dtgv1.BackgroundColor = SystemColors.ActiveCaption;
-            dtgv1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgv1.Location = new Point(26, 22);
-            dtgv1.Name = "dtgv1";
-            dtgv1.RowTemplate.Height = 25;
-            dtgv1.Size = new Size(755, 320);
-            dtgv1.TabIndex = 5;
-            dtgv1.Text = "Listado de Socios";
+            dtgvAct.BackgroundColor = SystemColors.ActiveCaption;
+            dtgvAct.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dtgvAct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvAct.Location = new Point(77, 32);
+            dtgvAct.Name = "dtgvAct";
+            dtgvAct.RowTemplate.Height = 25;
+            dtgvAct.Size = new Size(642, 321);
+            dtgvAct.TabIndex = 0;
             // 
             // btnVolver
             // 
-            btnVolver.Location = new Point(352, 382);
+            btnVolver.Location = new Point(350, 398);
             btnVolver.Name = "btnVolver";
             btnVolver.Size = new Size(75, 23);
-            btnVolver.TabIndex = 6;
+            btnVolver.TabIndex = 1;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
             // 
-            // frmListadoSocios
+            // frmListaActividades
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btnVolver);
-            Controls.Add(dtgv1);
-            Name = "frmListadoSocios";
-            Text = "ListadoSocios";
-            ((System.ComponentModel.ISupportInitialize)dtgv1).EndInit();
+            Controls.Add(dtgvAct);
+            Name = "frmListaActividades";
+            Text = "frmListaActividades";
+            ((System.ComponentModel.ISupportInitialize)dtgvAct).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dtgv1;
+        private DataGridView dtgvAct;
         private Button btnVolver;
     }
 }

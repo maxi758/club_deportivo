@@ -48,5 +48,12 @@ namespace club_deportivo
             listado.Show();
             this.Hide();
         }
+
+        private void btnActividades_Click(object sender, EventArgs e)
+        {
+            frmListaActividades actividades = new frmListaActividades();
+            actividades.Show();
+            this.Hide();
+        }
     }
 }

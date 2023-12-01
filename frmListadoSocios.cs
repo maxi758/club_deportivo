@@ -31,5 +31,12 @@ namespace club_deportivo
             dtgv1.DataSource = usuarios.ListarPersonas();
 
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal principal = new frmPrincipal();    
+            principal.Show();
+            this.Hide();
+        }
     }
 }

@@ -117,5 +117,32 @@ namespace DiseñoLogin.Datos
             }
         }
 
+        public DataTable ListarActividades()
+        {
+            MySqlDataReader resultado;
+            DataTable tabla = new DataTable();
+            MySqlConnection sqlCon = new MySqlConnection();
+            try
+            {
+                sqlCon = Conexion.getInstancia().CrearConexion();
+                MySqlCommand comando = new MySqlCommand("ListarActividades", sqlCon);
+                comando.CommandType = CommandType.StoredProcedure;
+                sqlCon.Open();
+                resultado = comando.ExecuteReader();
+                tabla.Load(resultado);
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al conectar a la base de datos: " + ex.Message);
+                throw;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open)
+                { sqlCon.Close(); };
+            }
+        }
+
     }
 }

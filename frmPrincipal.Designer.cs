@@ -34,6 +34,7 @@ namespace club_deportivo
             btnSalir = new Button();
             lblIngreso = new Label();
             btnListado = new Button();
+            btnActividades = new Button();
             SuspendLayout();
             // 
             // btnInscribir
@@ -84,12 +85,26 @@ namespace club_deportivo
             btnListado.UseVisualStyleBackColor = false;
             btnListado.Click += btnListado_Click;
             // 
+            // btnActividades
+            // 
+            btnActividades.BackColor = SystemColors.MenuHighlight;
+            btnActividades.Font = new Font("Sans Serif Collection", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point);
+            btnActividades.ForeColor = SystemColors.ButtonHighlight;
+            btnActividades.Location = new Point(419, 246);
+            btnActividades.Name = "btnActividades";
+            btnActividades.Size = new Size(193, 118);
+            btnActividades.TabIndex = 4;
+            btnActividades.Text = "Listado de Actividades";
+            btnActividades.UseVisualStyleBackColor = false;
+            btnActividades.Click += btnActividades_Click;
+            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FloralWhite;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnActividades);
             Controls.Add(btnListado);
             Controls.Add(lblIngreso);
             Controls.Add(btnSalir);
@@ -106,5 +121,6 @@ namespace club_deportivo
         private Button btnSalir;
         private Label lblIngreso;
         private Button btnListado;
+        private Button btnActividades;
     }
 }
