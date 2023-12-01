@@ -47,7 +47,6 @@ namespace club_deportivo
         }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ingreso exitoso", txtUsuario.Text);
             DataTable tablaLogin = new DataTable(); // es la que recibe los datos desde el formulario
             Usuarios dato = new Usuarios(); // variable que contiene todas las caracteristicas de la clase
             Console.WriteLine(txtUsuario.Text);
