@@ -36,6 +36,7 @@ namespace club_deportivo
             }
             else
             {
+                carnet carnet = new carnet();
                 string respuesta;
                 Socio persona = new Socio()
                 {
@@ -60,9 +61,14 @@ namespace club_deportivo
                     }
                     else
                     {
+                        carnet.nombre = txtNombre.Text +' '+ txtApellido.Text;
+                        carnet.dni = txtDNI.Text;
+                        carnet.id = respuesta;
                         MessageBox.Show("se almaceno con exito con el codigo Nro " + respuesta, "AVISO DEL SISTEMA",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Question);
+                        carnet.Show();
+                        this.Hide();
                     }
                 }
             }
